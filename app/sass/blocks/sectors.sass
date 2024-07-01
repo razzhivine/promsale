@@ -1,0 +1,47 @@
+.sectors
+    margin-bottom: 128px
+    @media (max-width: 991px)
+        margin-bottom: 78px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        gap: 32px
+        @media (max-width: 1199px)
+            gap: 16px
+    &__item
+        width: calc( 33.33333% - 21.33333px )
+        padding: 27px 44px 40px 32px
+        min-height: 395px
+        background: #FFFFFF08
+        border: 1px solid #E6E9F8
+        border-radius: calc( var(--border-radius) * 2 )     
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 0px 4px rgba(255, 255, 255, 0.15)
+        z-index: 1
+        position: relative
+        overflow: hidden
+        @media (max-width: 1199px)
+            width: calc( 50% - 8px )
+            padding: 27px 20px 20px 32px
+        @media (max-width: 767px)
+            width: 100%
+        &::before
+            content: ""
+            width: calc( 100% - 30px)
+            height: calc( 100% - 46px )
+            margin: 27px 18px 19px 12px
+            background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7
+            filter: blur(24px)
+            position: absolute
+            top: 0
+            left: 0
+            @media (max-width: 1199px)
+                margin: 27px 20px 20px 32px
+
+        &-icon
+            max-width: 100px
+            margin-bottom: 20px
+            z-index: 1
+            position: relative
+        &-title
+            z-index: 1
+            position: relative

@@ -1,0 +1,40 @@
+.popup
+    opacity: 0
+    pointer-events: none
+    transition: opacity .3s ease-in
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 32px
+    border-radius: calc( var(--border-radius) * 4 )
+    background: #fff
+    z-index: 10
+    max-width: 412px
+    width: calc( 100% - 26px )
+    &.-active
+        opacity: 1
+        pointer-events: all
+    &__top
+        display: flex
+        align-items: center
+        gap: 20px
+        justify-content: space-between
+        padding-bottom: 32px
+        position: relative
+        margin-bottom: 24px
+        &::before
+            content: ""
+            width: calc( 100% + 64px )
+            height: 1px
+            background: #E9E9E9
+            position: absolute
+            bottom: 0
+            left: -32px
+    &__close
+        cursor: pointer
+        width: 44px
+        height: 44px
+        background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.5407 16.8735C28.9313 16.483 28.9313 15.8498 28.5407 15.4593C28.1502 15.0687 27.517 15.0687 27.1265 15.4593L28.5407 16.8735ZM15.4593 27.1265C15.0687 27.517 15.0687 28.1502 15.4593 28.5407C15.8498 28.9313 16.483 28.9313 16.8735 28.5407L15.4593 27.1265ZM27.1265 28.5407C27.517 28.9313 28.1502 28.9313 28.5407 28.5407C28.9313 28.1502 28.9313 27.517 28.5407 27.1265L27.1265 28.5407ZM16.8735 15.4593C16.483 15.0687 15.8498 15.0687 15.4593 15.4593C15.0687 15.8498 15.0687 16.483 15.4593 16.8735L16.8735 15.4593ZM37.5 22C37.5 30.5604 30.5604 37.5 22 37.5V39.5C31.665 39.5 39.5 31.665 39.5 22H37.5ZM22 37.5C13.4396 37.5 6.5 30.5604 6.5 22H4.5C4.5 31.665 12.335 39.5 22 39.5V37.5ZM6.5 22C6.5 13.4396 13.4396 6.5 22 6.5V4.5C12.335 4.5 4.5 12.335 4.5 22H6.5ZM22 6.5C30.5604 6.5 37.5 13.4396 37.5 22H39.5C39.5 12.335 31.665 4.5 22 4.5V6.5ZM27.1265 15.4593L21.2929 21.2929L22.7071 22.7071L28.5407 16.8735L27.1265 15.4593ZM21.2929 21.2929L15.4593 27.1265L16.8735 28.5407L22.7071 22.7071L21.2929 21.2929ZM28.5407 27.1265L22.7071 21.2929L21.2929 22.7071L27.1265 28.5407L28.5407 27.1265ZM22.7071 21.2929L16.8735 15.4593L15.4593 16.8735L21.2929 22.7071L22.7071 21.2929Z' fill='%23C5C5C5'/%3E%3C/svg%3E%0A")
+    &__title
+        font-size: 24px

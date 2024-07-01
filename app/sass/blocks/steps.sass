@@ -1,0 +1,49 @@
+.steps
+    margin-bottom: 128px
+    @media (max-width: 991px)
+        margin-bottom: 78px
+    &__list
+        display: flex
+        flex-wrap: wrap
+        gap: 32px
+        margin-bottom: 40px
+        @media (max-width: 991px)
+            gap: 16px
+    &__item
+        width: calc( 25% - 24px )
+        padding: 24px
+        border: 1px solid #E6E9F8
+        border-radius: calc( var(--border-radius) * 2 )
+        background: #FFFFFF08
+        box-shadow: inset 0px 0px 68px rgba(255, 255, 255, 0.05), inset 0px 0px 4px rgba(255, 255, 255, 0.15)
+        min-height: 215px
+        position: relative
+        overflow: hidden
+        @media (max-width: 1199px)
+            width: calc( 50% - 16px )
+            @media (max-width: 991px)
+            width: calc( 50% - 8px )
+            @media (max-width: 575px)
+                width: 100%
+        &::before
+            content: ""
+            width: calc( 100% - 22px )
+            height: calc( 100% - 53px )
+            margin: 11px 11px 42px
+            background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7
+            // background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 51.97%, rgba(228, 43, 187, 0.45) 98.17%), #EBEDF7
+            filter: blur(24px)
+            position: absolute
+            top: 0
+            left: 0
+        &-icon
+            width: auto
+            height: 100%
+            max-height: 91px
+            margin-bottom: 20px
+            position: relative
+            z-index: 1
+        &-title
+            margin-bottom: 0
+            position: relative
+            z-index: 1

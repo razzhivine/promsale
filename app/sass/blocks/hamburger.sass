@@ -1,0 +1,38 @@
+.hamburger
+    max-width: 308px
+    background: #fff
+    position: fixed
+    top: 0
+    right: -308px
+    z-index: 10
+    padding: 8px 12px 80px
+    width: 100%
+    height: 100vh
+    transition: right .3s ease-in
+    &.-active
+        right: 0
+    &__top
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &-line
+            display: flex
+            gap: 32px
+            justify-content: space-between
+            align-items: center
+            padding: 8px 0 0 
+    &__close
+        width: 48px
+        height: 48px
+        background-image: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M38 12.82L35.18 10L24 21.18L12.82 10L10 12.82L21.18 24L10 35.18L12.82 38L24 26.82L35.18 38L38 35.18L26.82 24L38 12.82Z' fill='%23E9E9E9'/%3E%3C/svg%3E%0A")
+    &__inner
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+    &__menu
+        line-height: 3
+    &__bottom
+        display: flex
+        flex-direction: column
+        gap: 40px

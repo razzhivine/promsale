@@ -1,0 +1,44 @@
+.banner
+    position: relative
+    padding-top: 8px
+    margin-bottom: 128px
+    @media (max-width: 991px)
+        margin-bottom: 78px
+    &__image
+        z-index: -1
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        object-fit: cover
+    &::before
+        content: ""
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background: #111111CC
+        z-index: 1
+    &__header
+        position: relative
+        z-index: 2
+        margin-top: 0
+    &__content
+        position: relative
+        padding: 115px 0 150px
+        z-index: 2
+        @media (max-width: 991px)
+            padding-bottom: 55px
+    &__caption
+        max-width: 800px
+        @media (max-width: 991px)
+            margin-bottom: 100px
+    &__btns
+        display: flex
+        gap: 24px
+        @media (max-width: 767px)
+            flex-direction: column
+    &__btn
+        @media (max-width: 767px)
+            width: 100%

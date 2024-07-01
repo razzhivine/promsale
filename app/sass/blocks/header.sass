@@ -1,0 +1,32 @@
+.header
+    display: flex
+    justify-content: space-between
+    gap: 40px
+    padding: 8px
+    margin: 8px
+    border-radius: calc( var(--border-radius) * 2 )
+    background: #FFFFFF
+    @media (max-width: 1199px)
+        gap: 20px
+    &__block
+        display: flex
+        align-items: center
+        gap: 40px
+        width: 50%
+        @media (max-width: 1199px)
+            gap: 20px
+        &:last-child
+            justify-content: flex-end
+    &__search
+        @media (max-width: 991px)
+            display: none
+    &__contact
+        @media (max-width: 991px)
+            display: none
+    &__btn
+        @media (max-width: 991px)
+            display: none
+    &__hamburger-icon
+        display: none
+        @media (max-width: 991px)
+            display: block
