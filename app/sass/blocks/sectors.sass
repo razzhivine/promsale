@@ -24,19 +24,23 @@
             padding: 27px 20px 20px 32px
         @media (max-width: 767px)
             width: 100%
-        &::before
+        &::before,
+        &::after
             content: ""
             width: calc( 100% - 30px)
             height: calc( 100% - 46px )
             margin: 27px 18px 19px 12px
-            background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7
             filter: blur(24px)
+            z-index: -1
             position: absolute
             top: 0
             left: 0
             @media (max-width: 1199px)
                 margin: 27px 20px 20px 32px
-
+        &::before
+            background: linear-gradient(0deg, #EBEDF7, #EBEDF7)
+        &::after
+            background: linear-gradient(34.05deg, rgba(255, 255, 255, 0) 0%, rgba(66, 255, 244, .06) 65%, rgba(228, 43, 187, 0.45) 100%)
         &-icon
             max-width: 100px
             margin-bottom: 20px

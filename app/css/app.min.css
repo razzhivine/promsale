@@ -682,23 +682,31 @@ ul li::before {
     width: 100%;
   }
 }
-.sectors__item::before {
+.sectors__item::before, .sectors__item::after {
   content: "";
   width: calc(100% - 30px);
   height: calc(100% - 46px);
   margin: 27px 18px 19px 12px;
-  background: -o-linear-gradient(55.95deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7;
-  background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7;
   -webkit-filter: blur(24px);
           filter: blur(24px);
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
 }
 @media (max-width: 1199px) {
-  .sectors__item::before {
+  .sectors__item::before, .sectors__item::after {
     margin: 27px 20px 20px 32px;
   }
+}
+.sectors__item::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#EBEDF7), to(#EBEDF7));
+  background: -o-linear-gradient(bottom, #EBEDF7, #EBEDF7);
+  background: linear-gradient(0deg, #EBEDF7, #EBEDF7);
+}
+.sectors__item::after {
+  background: -o-linear-gradient(55.95deg, rgba(255, 255, 255, 0) 0%, rgba(66, 255, 244, 0.06) 65%, rgba(228, 43, 187, 0.45) 100%);
+  background: linear-gradient(34.05deg, rgba(255, 255, 255, 0) 0%, rgba(66, 255, 244, 0.06) 65%, rgba(228, 43, 187, 0.45) 100%);
 }
 .sectors__item-icon {
   max-width: 100px;
@@ -823,18 +831,25 @@ ul li::before {
     width: 100%;
   }
 }
-.steps__item::before {
+.steps__item::before, .steps__item::after {
   content: "";
   width: calc(100% - 22px);
   height: calc(100% - 53px);
   margin: 11px 11px 42px;
-  background: -o-linear-gradient(55.95deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7;
-  background: linear-gradient(34.05deg, rgba(66, 255, 244, 0) 75%, rgba(228, 43, 187, 0.45) 90%), #EBEDF7;
   -webkit-filter: blur(24px);
           filter: blur(24px);
   position: absolute;
   top: 0;
   left: 0;
+}
+.steps__item::before {
+  background: -webkit-gradient(linear, left bottom, left top, from(#EBEDF7), to(#EBEDF7));
+  background: -o-linear-gradient(bottom, #EBEDF7, #EBEDF7);
+  background: linear-gradient(0deg, #EBEDF7, #EBEDF7);
+}
+.steps__item::after {
+  background: -o-linear-gradient(55.95deg, rgba(255, 255, 255, 0) 0%, rgba(66, 255, 244, 0.06) 65%, rgba(228, 43, 187, 0.45) 100%);
+  background: linear-gradient(34.05deg, rgba(255, 255, 255, 0) 0%, rgba(66, 255, 244, 0.06) 65%, rgba(228, 43, 187, 0.45) 100%);
 }
 .steps__item-icon {
   width: auto;
